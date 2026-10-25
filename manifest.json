@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Яндекс Музыка: Точная дата релиза",
+  "version": "1.0.0",
+  "description": "Показывает точную дату выхода альбома при наведении на год",
+  "permissions": [],
+  "host_permissions": [
+    "https://music.yandex.ru/*",
+    "https://api.music.yandex.net/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://music.yandex.ru/*"
+      ],
+      "js": ["content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}

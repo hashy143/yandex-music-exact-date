@@ -1,0 +1,55 @@
+.ym-year-interactive {
+  text-decoration: underline dotted rgba(255, 255, 255, 0.4) !important;
+  text-underline-offset: 4px !important;
+  transition: color 0.15s ease;
+}
+
+.ym-year-interactive:hover {
+  color: #fff !important;
+}
+
+/* Фиксированный тултип в body */
+.ym-exact-date-bubble {
+  position: fixed;
+  z-index: 2147483647;
+  pointer-events: none;
+  
+  background: rgba(28, 28, 28, 0.96);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  
+  color: #f2f2f2;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1;
+  white-space: nowrap;
+  
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  
+  transform: translate(-50%, calc(-100% + 4px));
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.15s ease, transform 0.15s ease, visibility 0.15s;
+}
+
+.ym-exact-date-bubble.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, -100%);
+}
+
+/* Стрелочка строго по центру бабла */
+.ym-exact-date-bubble::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 5px;
+  border-style: solid;
+  border-color: rgba(28, 28, 28, 0.96) transparent transparent transparent;
+}
