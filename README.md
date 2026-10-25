@@ -35,7 +35,7 @@
 1. Склонируй репозиторий или скачай архив с кодом:
 
    ```bash
-   git clone https://github.com/hashy143/yandex-music-exact-date.git
+   git clone https://github.com/username/yandex-music-exact-date.git
    ```
 
 2. Открой в браузере (Chrome / Edge / Brave / Yandex Browser) страницу управления расширениями:
